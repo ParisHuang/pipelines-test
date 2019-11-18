@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        powershell 'dotnet build -c $env:Test_Environment'
+        powershell(script: 'dotnet build -c $env:Test_Environment', returnStatus: true)
       }
     }
     stage('test') {
