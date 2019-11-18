@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        echo 'Start build'
+        echo 'Start build  PATH: ${PATH}'
         powershell(script: "dotnet build", returnStatus: true)
         echo 'End build'
       }
