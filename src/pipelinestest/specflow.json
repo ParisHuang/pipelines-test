@@ -1,0 +1,13 @@
+{
+  "language": {
+    "feature": "en-US"
+  },
+  "generator": {
+    "allowRowTests": false
+  },
+  "stepAssemblies":[
+    {
+      "assembly": "AutoTestExtras.Core"
+    }
+  ]
+}
