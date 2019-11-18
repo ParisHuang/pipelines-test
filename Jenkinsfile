@@ -4,9 +4,9 @@ pipeline {
     stage('build') {
       steps {
         echo 'Start build'
+        bat 'python -V'
         powershell 'dotnet build'
         echo 'End build'
-        bat 'python -V'
       }
     }
     stage('test') {
