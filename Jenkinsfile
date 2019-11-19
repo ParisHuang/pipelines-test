@@ -4,14 +4,15 @@ pipeline {
     stage('build') {
       steps {
         echo 'Start build'
-        powershell(script: 'cd src\\pipelinestest dotnet build -c development', returnStatus: true)
+        powershell 'cd src\\pipelinestest'
+        powershell 'dotnet build -c development'
         echo 'End build'
       }
     }
     stage('test') {
       steps {
         echo 'Start test'
-        powershell(script: "dotnet xunit -c development -html report.html -verbose", returnStatus: true)
+        powershell(script: 'dotnet xunit -c development -html report.html -verbose', returnStatus: true)
         echo 'End test'
       }
     }
