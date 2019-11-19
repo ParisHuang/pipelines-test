@@ -1,8 +1,12 @@
 pipeline {
+  
   agent {
-    label 'Automation'
-    customWorkspace '${WORKSPACE}\\src\\pipelinestest'
+    node{
+      label 'Automation'
+      customWorkspace '${WORKSPACE}\\src\\pipelinestest'
+    }
   }
+  
   stages {
     
     stage('build') {
@@ -28,4 +32,5 @@ pipeline {
     }
     
   }
+  
 }
