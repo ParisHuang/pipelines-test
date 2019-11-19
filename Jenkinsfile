@@ -14,6 +14,7 @@ pipeline {
         echo 'End build'
       }
     }
+    
     stage('test') {
       steps {
         echo 'Start test'
@@ -25,8 +26,5 @@ pipeline {
       }
     }
     
-    environment {
-      Test_Environment = 'development'
-    }
   }
 }
