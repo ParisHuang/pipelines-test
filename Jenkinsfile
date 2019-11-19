@@ -1,12 +1,9 @@
 pipeline {
   agent {
     label 'Automation'
-    customWorkspace '${WORKSPACE}\\src\\pipelinestest'
   }
   stages {
-    environment {
-      Test_Environment = 'development'
-    }
+    
     stage('build') {
       steps {
         echo 'Start build'
@@ -26,6 +23,10 @@ pipeline {
         '''
         echo 'End test'
       }
+    }
+    
+    environment {
+      Test_Environment = 'development'
     }
   }
 }
