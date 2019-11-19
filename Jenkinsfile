@@ -3,9 +3,6 @@ pipeline {
     node {
       label 'Automation'
     }
-    
-    customWorkspace '${WORKSPACE}\\src\\pipelinestest'
-
   }
   
   stages {
@@ -13,6 +10,7 @@ pipeline {
       steps {
         echo 'Start build'
         powershell '''
+          cd ./src/pipelinestest
           dir
           dotnet build -c development
         '''
@@ -23,6 +21,7 @@ pipeline {
       steps {
         echo 'Start test'
         powershell '''
+          cd ./src/pipelinestest
           dir
           dotnet xunit -c development -html report.html -verbose
         '''
