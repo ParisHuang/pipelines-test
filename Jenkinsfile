@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'Start build'
-        powershell(script: 'dotnet build -c $env:Test_Environment', returnStatus: true)
+        powershell(script: 'cd src\\pipelinestest dotnet build -c $env:Test_Environment', returnStatus: true)
         echo 'End build'
       }
     }
