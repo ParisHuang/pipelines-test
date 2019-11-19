@@ -4,11 +4,11 @@ pipeline {
     stage('build') {
       steps {
         echo 'Start build'
-        powershell """
+        powershell '''
           cd .\\src\\pipelinestest
           dir
           dotnet build -c development
-        """
+        '''
         echo 'End build'
       }
     }
