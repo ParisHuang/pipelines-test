@@ -9,6 +9,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'Start build'
+        echo '${WORKSPACE}'
         powershell '''
           cd ./src/pipelinestest
           dir
