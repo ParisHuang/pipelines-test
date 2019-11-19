@@ -2,7 +2,7 @@ pipeline {
   agent {
     node {
       label 'Automation'
-      customWorkspace '.\\src\\pipelinestest'
+      customWorkspace '${WORKSPACE}/src/pipelinestest'
     }
 
   }
