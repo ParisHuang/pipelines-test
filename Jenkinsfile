@@ -1,14 +1,12 @@
 pipeline {
-  
   agent {
-    node{
+    node {
       label 'Automation'
       customWorkspace '${WORKSPACE}\\src\\pipelinestest'
     }
+
   }
-  
   stages {
-    
     stage('build') {
       steps {
         echo 'Start build'
@@ -19,7 +17,6 @@ pipeline {
         echo 'End build'
       }
     }
-    
     stage('test') {
       steps {
         echo 'Start test'
@@ -30,7 +27,5 @@ pipeline {
         echo 'End test'
       }
     }
-    
   }
-  
 }
