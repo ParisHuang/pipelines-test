@@ -15,7 +15,11 @@ pipeline {
     stage('test') {
       steps {
         echo 'Start test'
-        powershell(script: 'dotnet xunit -c development -html report.html -verbose', returnStatus: true)
+        powershell '''
+          cd .\\src\\pipelinestest
+          dir
+          dotnet xunit -c development -html report.html -verbose
+        '''
         echo 'End test'
       }
     }
