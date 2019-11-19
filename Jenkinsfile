@@ -4,8 +4,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'Start build'
-        bat 'cd src\\pipelinestest'
-        bat 'dir'
+        bat 'cd src\\pipelinestest;dir'
         powershell 'dotnet build -c development'
         echo 'End build'
       }
