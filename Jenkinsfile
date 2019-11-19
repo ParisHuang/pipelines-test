@@ -1,6 +1,7 @@
 pipeline {
   agent {
     label 'Automation'
+    customWorkspace '${WORKSPACE}\\src\\pipelinestest'
   }
   stages {
     
