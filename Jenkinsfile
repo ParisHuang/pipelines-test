@@ -3,8 +3,8 @@ pipeline {
     node {
       label 'Automation'
     }
+
   }
-  
   stages {
     stage('build') {
       steps {
